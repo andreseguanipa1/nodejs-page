@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="StyleSheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&display=swap" rel="stylesheet">
+
+    <title>NodeJS</title>
+</head>
+
+<body>
+
+  <div class="contenedor">
+
+    <div class="menu-main">
+        <a href="#me">NodeJS</a>
+        <a href="#sintaxis">Sintaxis</a>
+        <a href="#express">Express</a>
+        <a href="#server">Server</a>
+        <a href="#companies">Empresas</a>
+        <a href="#contact">Contáctanos</a>
+    </div>
+  
+    <div class="content">
+  
+      <div class="me white" id="me">
+        
+        <h2 style="font-size: 200%;">NodeJS</h2>
+
+        <br>
+
+          <div class="photo">
+            <img src="./img/img-1.png" class="img-node" loading="lazy">
+          </div>
+
+          <div class="space txt-node">
+            <p>Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor (pero no limitándose a ello) basado en el lenguaje de 
+                programación JavaScript, asíncrono, con E/S de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google.</p>
+            <br>
+
+            <p>Fue creado con el enfoque de ser útil en la creación de programas de red, como por ejemplo, <b>Servidores Web.</b> Esto, a su vez, es lo que hace
+            a NodeJS tan exitoso, ya que es capaz de manejar una gran cantidad de conexiones simultáneas con un alto nivel de rendimiento, lo que equivale a una alta escalabilidad.</p>
+            <br>
+
+            <p> Además, los usuarios de Node.js están libres de preocuparse por el bloqueo del proceso, ya que no existe. Casi ninguna función en Node.js realiza I/O directamente, 
+              por lo que el proceso nunca se bloquea. Por ello, es muy propicio desarrollar sistemas escalables en Node.js.</p>
+
+          </div>
+
+      </div>
+  
+      <div class="me dark" id="sintaxis">
+
+        <h2 id="sintaxis" class="txt-pro" style="font-size: 200%;">Sintaxis</h2>
+        <br>
+          <div class="example-container">
+            <div class="space example1" id="projects">
+                <div class="code">
+                  <p><span class="const">const</span> http = <span class="orange">require</span>(<span class="string">'http'</span>);</p>
+                  <p><br></p>
+                  <p><span class="const">const</span> hostname = <span class="string">'127.0.0.1'</span>;</p>
+                  <p><span class="const">const</span> port = <span class="orange">3000</span>;</p> 
+                  <p><br></p>
+                  <p><span class="const">const</span> server = http.<span class="orange">createServer</span>((req, res) => {</p> 
+                  <p class="child">res.statusCode = <span class="orange">200</span>;</p>  
+                  <p class="child">res.<span class="orange">setHeader</span>(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</p>  
+                  <p class="child">res.<span class="orange">end</span>(<span class="string">'Hola Mundo'</span>);</p>  
+                  <p>});</p>
+                  <p><br></p>
+                  <p>server.<span class="orange">listen</span>(port, hostname, () => {</p>
+                  <p class="child">console.<span class="orange">log</span>(<span class="string">`El servidor se está ejecutando en http://</span>${hostname}<span class="string">:</span>${port}<span class="string">/`</span>);</p>
+                  <p>});</p><br>
+                </div>
+                <br>
+                <p class="txt-pro">En el código puede apreciarse como hacer un Hola Mundo con NodeJS</p>
+            </div>
+
+            <div class="example2">
+              <p class="txt-pro">Nos vamos desde la línea de comandos a la carpeta donde hemos guardado el archivo server.js y ejecutamos el comando "node" seguido del nombre del archivo que pretendemos ejecutar:</p><br>
+              <p class="txt-pro"><b style="color: black;">node server.js</b></p><br>
+              <p class="txt-pro">En consola de comandos nos debe aparecer el mensaje que informa que nuestro servidor está escuchando en el puerto 3000.</p><br>
+              <p class="txt-pro">Sin cerrar la línea de comandos, entramos a nuestro navegador y accedemos a:</p><br>
+              <p class="txt-pro"><b style="color: black;">http://localhost:3000</b></p><br>
+              <p class="txt-pro"  id="express">Entonces nos tendría que aparecer el mensaje <b style="color: black;">"Hola Mundo"</b>.</p><br>
+
+
+            </div>
+
+          </div>
+  
+          <hr class="divider white" />
+  
+          <div class="info" id="" >
+            <h2 class="txt-pro" style="font-size: 200%;">Express</h2> 
+            <br>
+            <p class="space txt-pro" style="width: 90%;">Express.js, o simplemente Express, es un marco de aplicación web de back-end para Node.js, lanzado como software gratuito y de código abierto bajo la licencia MIT. 
+              Está diseñado para crear aplicaciones web y API. Se le ha llamado el marco de servidor estándar de facto para Node.js.</p>
+
+            <br>
+
+            <div class="example-container">
+              <div class="space example1" id="projects">
+                  <div class="code">
+                    <p><span class="const">const</span> express = <span class="orange">require</span>(<span class="string">'express'</span>);</p>
+                    <p><span class="const">const</span> app = <span class="orange">express</span>();</p>
+                    <p><span class="const">const</span> port = <span class="orange">3000</span>;</p> 
+                    <p><br></p>
+                    <p>app.<span class="orange">get</span>(<span class="string">'/'</span>, (req, res) => {</p> 
+                    <p class="child">res.<span class="orange">send</span>(<span class="string">'Hello World!'</span>);</p>  
+                    <p>});</p>
+                    <p><br></p>
+                    <p>app.<span class="orange">listen</span>(port, () => {</p>
+                    <p class="child">console.<span class="orange">log</span>(<span class="string">`Servidor corriendo en http://</span>${hostname}<span class="string">:</span>${port}<span class="string">/`</span>);</p>
+                    <p>});</p><br>
+                  </div>
+                  <br>
+                  <p class="txt-pro">En el código puede apreciarse como hacer un Hola Mundo con la libreria Express</p>
+              </div>
+  
+              <div class="example2">
+                <p class="txt-pro">Nos vamos desde la línea de comandos y ejecutamos el comando: <br> <b style="color: black;">npm install express --save</b> a la carpeta donde hemos guardado el archivo server-express.js. Luego ejecutamos el comando "node" seguido del nombre del archivo que pretendemos ejecutar:</p><br>
+                <p class="txt-pro"><b style="color: black;">node server-express.js</b></p><br>
+                <p class="txt-pro">En consola de comandos nos debe aparecer el mensaje que informa que nuestro servidor está escuchando en el puerto 3000.</p><br>
+                <p class="txt-pro">Sin cerrar la línea de comandos, entramos a nuestro navegador y accedemos a:</p><br>
+                <p class="txt-pro"><b style="color: black;">http://localhost:3000</b></p><br>
+                <p class="txt-pro" id="server">Entonces nos tendría que aparecer el mensaje <b style="color: black;">"Hola Mundo"</b>.</p><br>
+  
+  
+              </div>
+  
+            </div>
+
+
+
+          </div>
+      </div>
+
+
+  
+      <div class="me white" id="back-white">
+  
+        <h2 style="font-size: 200%;">Aplicaciones web del lado del Servidor</h2>
+        <br>
+
+        <div class="space text">
+
+          <p>Como dijimos anteriormente, node.js con express.js pueden ser utilizados para crear aplicaciones web clásicas en el servidor. 
+            Sin embargo, mientras sea posible, este paradigma en petición-respuesta de Node.js sería llevar alrededor de HTML, no es el más típico de los casos de uso. 
+            Hay argumentos para estar a favor y en contra de este enfoque. Aquí están algunos hechos a considerar:</p>
+  
+          <br>
+
+          <h2>Ventajas</h2>
+          <br>
+
+          <ul style="margin-left: 3%;">
+            <li>Si la aplicación no tiene ningún cálculo intensivo del CPU, puedes construir en Javascript de arriba a abajo, 
+              inclusive a nivel de base de datos si utilizas el objeto de almacenamiento JSON como MongoDB. Esto facilita el desarrollo (incluyendo la contratación) significativamente.</li>
+
+              <br>
+
+              <li>Los Crawlers reciben una respuesta totalmente HTML, que es mucho más SEO-friendly, digamos, una sola página o en una aplicación de Websockets app se ejecuta sobre Node.js.</li>
+          </ul>
+
+          <br>
+
+          <h2>Desventajas</h2>
+          <br>
+
+          <ul style="margin-left: 3%;">
+            <li>Un CPU de cálculo intensivo bloqueará la receptividad del Node.js, por lo que una plataforma de roscado es un mejor enfoque. 
+              Alternativamente, podrías intentar escalar el cómputo [*].</li>
+
+              <br>
+
+              <li id="companies">Utilizando Node.js con una base de datos relacional es aún bastante engorroso. 
+                Se podría utilizar cualquier otro entorno como Rails, Django, o ASP.NET MVC si se está intentando realizar operaciones relacionales.</li>
+          </ul>
+
+        </div>
+
+
+        <hr class="divider dark"/>
+
+        <h2 style="font-size: 200%;">Empresas que utilizan NodeJS</h2>
+
+      </div>
+
+          <div class="companies">
+       
+            <div class="card">
+                <img src="img/netflix.jpg">
+            </div>
+
+            <div class="card">
+              <img src="img/paypal.png">
+            </div>
+
+            <div class="card">
+              <img src="img/walmart.jpg">
+            </div>
+            
+            <div class="card">
+                <img src="img/ebay.jpg">
+            </div>
+    
+            <div class="card">
+                <img src="img/medium.png">
+            </div>
+
+            <div class="card">
+              <img src="img/uber.png">
+            </div>
+            
+            <div class="card">
+                <img src="img/nasa.jpg">
+            </div>
+
+            <div class="card">
+              <img src="img/trello.jpg">
+            </div>
+    
+            
+        </div> 
+  
+    </div>
+
+    <div class="form" id="contact">
+        <form>
+
+            <h2 class="form-font">¿Quieres saber más?</h2>
+            <h3 class="form-font">Escríbenos</h3>
+
+
+            <input class="form-font" type="text" placeholder="Nombre">
+            <input class="form-font" type="email" placeholder="Email">
+            <textarea class="form-font" placeholder="Mensaje"></textarea>
+            <button class="send-form">Enviar</button>
+        </form>
+    </div>
+
+    <div class="footer">
+      <ul class="icons d-flex justify-content-around m-0">
+        <li class="icon fab fa-whatsapp fa-2x whatsapp" href="#" ></li>
+        <li class="icon fab fa-instagram fa-2x instagram" href="#"></li>
+        <li class="icon fas fa-at fa-2x gmail" href="#"></li>
+      </ul>
+      <br>
+      <p style="color: rgb(114, 107, 107);">Andres Guanipa - NodeJS Developer.</p>
+      <p style="color: rgb(114, 107, 107);">Más información acerca de mi: <a href="https://andresguanipa.herokuapp.com" target="_black">andresguanipa.herokuapp.com</a></p>
+      <p style="color: rgb(114, 107, 107);"><i class="far fa-copyright" style="color: rgb(114, 107, 107);"></i><span> Todos los derechos reservados.</span></p>
+
+    </div>
+  
+  </div>
+
+</body>
+
+</html>
