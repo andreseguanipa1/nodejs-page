@@ -74,11 +74,6 @@ body{
     background-color: white;
 }
 
-
-.me.dark{
-    background-color: #385971;
-}
-
 .photo{
     position: relative;
     float: right;
@@ -99,14 +94,13 @@ body{
     width: 55%;
 }
 
-.txt-pro{
-    color:white;
-}
-
 /* ------------------------------
         Sintaxis/Express
 ------------------------------ */
 
+.me.dark{
+    background-color: #385971;
+}
 
 .code{
     padding: 2%;
@@ -157,32 +151,9 @@ body{
 }
 
 
-
-.text{
-    width: 85%;
-}
-
-.big-small{
-    font-size: 200%;
-}
-
-.space{
-    margin-left: 1%;
-}
-
-
-.divider{
-    margin: 3% 0% 3% 0%;
-    width: 90%;
-}
-
-.divider.white{
-    background-color: white;
-}
-
-.divider.dark{
-    background-color: #385971;
-}
+/* ------------------------------
+           Empresas
+------------------------------ */
 
 
 .companies{
@@ -219,105 +190,14 @@ body{
 }
 
 
-
-
-
-
-
-
-
 #back-white{
     padding-bottom: 2% !important;
 }
 
-.me.dark.centrar{
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
-a{
-    text-decoration: none;
-    color: rgb(17, 15, 15);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #fff !important;
-    color: white;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;  
-    border-top: 2px solid #212529;
-    padding: 2% 0% 2% 0%;  
-}
-
-.footer.contact{
-    position: absolute;
-
-}
-
-.icons{
-    padding: 0% 2% 0% 2%;
-}
-
-.icon{
-    color: #2D2D2D;
-    padding: 0% 3% 0% 3%;
-}
-
-.instagram:hover{
-    color: #AD308B;
-    cursor: pointer;
-
-}
-
-.whatsapp:hover{
-    color: #25d366;
-    cursor: pointer;
-
-}
-
-.gmail:hover{
-    color: #dd4b39;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ------------------------------
+           Escríbeme
+------------------------------ */
 
 
 .form{
@@ -388,9 +268,87 @@ input:focus, textarea:focus{
 }
 
 
+/* ------------------------------
+           Footer
+------------------------------ */
 
 
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff !important;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;  
+    border-top: 2px solid #212529;
+    padding: 2% 0% 2% 0%;  
+}
 
+a{
+    text-decoration: none;
+    color: rgb(17, 15, 15);
+}
+
+.icons{
+    padding: 0% 2% 0% 2%;
+}
+
+.icon{
+    color: #2D2D2D;
+    padding: 0% 3% 0% 3%;
+}
+
+.instagram:hover{
+    color: #AD308B;
+    cursor: pointer;
+
+}
+
+.whatsapp:hover{
+    color: #25d366;
+    cursor: pointer;
+
+}
+
+.gmail:hover{
+    color: #dd4b39;
+    cursor: pointer;
+}
+
+/* ------------------------------
+           Otros
+------------------------------ */
+
+.big-small{
+    font-size: 200%;
+}
+
+.space{
+    margin-left: 1%;
+}
+
+
+.divider{
+    margin: 3% 0% 3% 0%;
+    width: 90%;
+}
+
+.divider.white{
+    background-color: white;
+}
+
+.divider.dark{
+    background-color: #385971;
+}
+
+.text{
+    width: 85%;
+}
+
+.txt-pro{
+    color:white;
+}
 
 
 
